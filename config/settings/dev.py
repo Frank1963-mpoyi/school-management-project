@@ -56,7 +56,7 @@ DEBUG_TOOLBAR_CONFIG = {
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'school/static'),]
 
 print("\n")
 print("DEBUG = ", DEBUG)

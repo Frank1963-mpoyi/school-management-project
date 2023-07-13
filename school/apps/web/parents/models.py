@@ -8,5 +8,5 @@ class Parent(models.Model):
 
 class ParentStudentRelation(models.Model):
     parent = models.ForeignKey(Parent, on_delete=models.CASCADE)
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    # student = models.ForeignKey(Student, on_delete=models.CASCADE)
     # Add more fields as per your requirements

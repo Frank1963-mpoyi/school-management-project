@@ -1,5 +1,5 @@
 from django.db import models
-from django_countries.fields import CountryField
+#from django_countries.fields import CountryField
 from django.core.validators import RegexValidator
 
 USERNAME_REGEX = '^[a-zA-Z0-9.+-]*$'
@@ -13,7 +13,7 @@ class AddressFields(models.Model):
     area = models.CharField('Area', max_length=100, blank=True, null=True)
     city = models.CharField('City',max_length=100, blank=True, null=True)
     region = models.CharField('Region', max_length=100, blank=True, null=True)
-    country = CountryField('Country', null=True)
+    #country = CountryField('Country', null=True)
 
     class Meta:
         abstract = True
@@ -28,7 +28,6 @@ class AuditFields(models.Model):
 
     class Meta:
         abstract = True
-
 
 class EmailFields(models.Model):
     email = models.EmailField('Email',blank=True, null=True)

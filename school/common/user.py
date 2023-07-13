@@ -1,5 +1,5 @@
 from django.db.models import Q
-from hospital.apps.web.accounts.models import CustomUser
+from school.apps.web.accounts.models import CustomUser
 
 
 def check_allowed_staff(self):
@@ -46,21 +46,21 @@ def check_allowed_staff(self):
     return staff
 
 
-def get_user(username):
+# def get_user(username):
     
-    user = CustomUser.objects \
-        .filter(
-            Q(username = username) |
-            Q(email = username) 
-        ) \
-        .exclude(
-            Q(bool_deleted  = True) |
-            Q(is_active = False)
-        ) \
-        .values(
-            'uuid_code', 'token_key', 'code', 'username', 'phone_number', 'country_code', 'fullname', 'id_number','dob',
-            'birth_place', 'email', 'image', 'user_type', 'user_level', 'last_login', 'is_active',
-            'is_staff', 'is_admin', 'is_superuser', 'datetime_created', 'datetime_updated', 'last_updated_by', 'bool_deleted',
-        ).first()
+#     user = CustomUser.objects \
+#         .filter(
+#             Q(username = username) |
+#             Q(email = username) 
+#         ) \
+#         .exclude(
+#             Q(bool_deleted  = True) |
+#             Q(is_active = False)
+#         ) \
+#         .values(
+#             'uuid_code', 'token_key', 'code', 'username', 'phone_number', 'country_code', 'fullname', 'id_number','dob',
+#             'birth_place', 'email', 'image', 'user_type', 'user_level', 'last_login', 'is_active',
+#             'is_staff', 'is_admin', 'is_superuser', 'datetime_created', 'datetime_updated', 'last_updated_by', 'bool_deleted',
+#         ).first()
         
-    return user
+#     return user

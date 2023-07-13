@@ -15,16 +15,8 @@ USER_LEVEL = (
 )
 
 DEPARTMENTS = (
-    ('General Health', 'General Health'),
-    ('Orthopaedic', 'Orthopaedic'),
-    ('Neurology', 'Neurology'),
-    ('Cardiologist','Cardiologist'),
-    ('Dermatologists','Dermatologists'),
-    ('Emergency Medicine Specialists','Emergency Medicine Specialists'),
-    ('Allergists/Immunologists','Allergists/Immunologists'),
-    ('Anesthesiologists','Anesthesiologists'),
-    ('Colon and Rectal Surgeons','Colon and Rectal Surgeons'),
-    ('Dental', 'Dental')
+    ('', ''),
+   
 )
 
 # ISSUES TYPES

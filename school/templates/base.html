@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+{% include 'includes/header.html' %}
+
+<body>
+    
+    <header>
+        {#% include 'includes/top_bar.html' %#}
+
+        {% include 'includes/navbar.html' with brand_name='SCHOOL MANAGEMENT' %}
+        {% include 'includes/message.html' %}
+    </header>
+
+    {% block content %}
+
+    {% endblock content %}
+
+<!--    Footer -->
+    {% include 'includes/footer.html' %}
+
+    {% include 'includes/scripts.html' %}
+</body>
+
+</html>

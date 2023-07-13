@@ -15,8 +15,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 
-# AUTH_USER_MODEL = 'accounts.CustomUser'
-# AUTHENTICATION_BACKENDS = ('config.backends.AuthBackend',)
+AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTHENTICATION_BACKENDS = ('config.backends.AuthBackend',)
 
 # Application definition
 INSTALLED_APPS = [
@@ -34,8 +34,22 @@ INSTALLED_APPS = [
 
     # Third Party Apps
     'crispy_forms',
-   
-
+    
+    # apps
+    'school.apps.web.accounts',
+    'school.apps.web.analytics',
+    'school.apps.web.assignments',
+    'school.apps.web.attendance',
+    'school.apps.web.communications',
+    'school.apps.web.courses',
+    'school.apps.web.finances',
+    'school.apps.web.gradebooks',
+    'school.apps.web.hr',
+    'school.apps.web.library',
+    'school.apps.web.parents',
+    'school.apps.web.staff',
+    'school.apps.web.students',
+    'school.apps.web.timetable',
 ]
 
 MIDDLEWARE = [
@@ -134,11 +148,11 @@ EMAIL_PASSWORD  = config('EMAIL_PASSWORD')
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # for development
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/includes')# for python manage.py collectstatic # for production
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'school/static')] # for development
+STATIC_ROOT = os.path.join(BASE_DIR, 'school/static/staticfiles')# for python manage.py collectstatic # for production
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'school/static/media')
 
 # cloudinary image
 cloudinary.config(cloud_name = config('CLOUD_NAME'), api_key = config('API_KEY'), api_secret = config('API_SECRET'))
