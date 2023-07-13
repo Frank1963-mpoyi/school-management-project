@@ -39,4 +39,4 @@ This is a web-based school management project developed using Django. The projec
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/your-username/school-management-project.git
+git clone 
